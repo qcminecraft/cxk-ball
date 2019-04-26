@@ -4,41 +4,46 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0" />
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=11">
-		<meta name="description" content="这是一款 HTML5 开发的 CXK 打篮球小游戏，无聊的时候玩玩吧！">
-		<meta name="keywords" content="CXK,打篮球,游戏,弹球,篮球,HTML5,开源,caixukun,CXK出来打球,你打篮球像CXK">
+		<meta name="description" content="这是一款 HTML5 开发的 蔡徐坤 打篮球小游戏，无聊的时候玩玩吧！">
+		<meta name="keywords" content="蔡徐坤,打篮球,游戏,弹球,篮球,HTML5,开源,caixukun,蔡徐坤出来打球,你打篮球像CXK">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" crossorigin="anonymous">
 		<link rel="stylesheet" href="css/style.css?s=2">
-		<title>CXK 打篮球 - CXK，出来打球！CXK游戏_你打游戏像CXK_篮球打CXK</title>
+		<title>蔡徐坤打篮球 - 蔡徐坤，出来打球！蔡徐坤游戏_你打游戏像蔡徐坤_篮球打蔡徐坤</title>
 		<!--<link rel="stylesheet" href="css/common.css">-->
-		<script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.0/showdown.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" crossorigin="anonymous"></script>
-		<script type="text/javascript">
-			// 百度统计代码
-			var _hmt = _hmt || [];
-			(function() {
-			  var hm = document.createElement("script");
-			  hm.src = "https://hm.baidu.com/hm.js?5adedb455da362ba577abe2fd8e1095d";
-			  var s = document.getElementsByTagName("script")[0];
-			  s.parentNode.insertBefore(hm, s);
-			})();
-		</script>
+		<!-- 预加载图片 -->
+		<link rel="prefetch" href="images/ball.png" />
+		<link rel="prefetch" href="images/ballshadow.png" />
+		<link rel="prefetch" href="images/paddle_1.png" />
+		<link rel="prefetch" href="images/paddle_2.png" />
+		<link rel="prefetch" href="images/paddle2_1.png" />
+		<link rel="prefetch" href="images/paddle2_2.png" />
+		<link rel="prefetch" href="images/paddle3_1.png" />
+		<link rel="prefetch" href="images/paddle3_2.png" />
+		<link rel="prefetch" href="images/paddle4_1.png" />
+		<link rel="prefetch" href="images/paddle4_2.png" />
 	</head>
 	<body>
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">
-					<h2>CXK 打篮球</h2>
-					<p>CXK，出来打球！</p>
+					<h2>蔡徐坤 打🏀篮球</h2>
+					<p>蔡徐坤，出来打球！</p>
 					<hr>
 					<center>
 						<p>
 							<div class="input-group">
+								<span class="input-group-addon">关卡</span>
+								<select class="form-control" id="level" disabled>
+									<option selected>1</option>
+								</select>
 								<span class="input-group-addon">难度</span>
 								<select class="form-control" id="ballspeedset">
 									<option value="2">简单难度（Speed 2）</option>
-									<option value="3" selected>普通难度（Speed 3）</option>
-									<option value="5">困难模式（Speed 5）</option>
+									<option value="3">普通难度（Speed 3）</option>
+									<option value="5" selected>困难模式（Speed 5）</option>
 									<option value="7">极限模式（Speed 7）</option>
 									<option value="9">非人类（Speed 9）</option>
 								</select>
@@ -55,9 +60,9 @@
 					</center>
 					<hr>
 					<h3>游戏说明</h3>
-					<p>使用方向键控制 CXK 左右移动，使用回车让 CXK 发球，按 P 暂停游戏，通关后按 N 进入下一关</p>
+					<p>使用方向键控制 蔡徐坤 左右移动，使用回车让 蔡徐坤 发球，按 P 暂停游戏，通关后按 N 进入下一关</p>
 					<p>特殊技能：W 发起虚鲲鬼步，5 秒内能 100% 接住球，每次消耗 1000 积分。</p>
-					<p>移动端可以点击屏幕左右控制 CXK 移动。</p>
+					<p>移动端可以点击屏幕左右控制 蔡徐坤 移动。</p>
 					<p>如果出现显示不正常的情况请截图并通过 Issues 反馈。</p>
 					<hr>
 					<h3>更新记录</h3>
@@ -74,25 +79,14 @@
 						</div>
 					</details>
 					<hr>
-					<p>Github 开源项目：<a href="https://github.com/kasuganosoras/cxk-ball" target="_blank">https://github.com/kasuganosoras/cxk-ball</a>（原作者：<a href="https://github.com/yangyunhe369" target="_blank">yangyunhe369</a>）</p>
+					<p>Github 开源项目：<a href="https://github.com/qcminecraft/cxk-ball" target="_blank">https://github.com/qcminecraft/cxk-ball</a>（改编自：<a href="https://github.com/kasuganosoras/cxk-ball" target="_blank">https://github.com/kasuganosoras/cxk-ball</a>）</p>
 					<p>喜欢的话欢迎点个 Star~</p>
 				</div>
 			</div>
 		</div>
 	</body>
-	<!-- 图片预缓存 -->
-	<img src="images/ball.png" style="width: 0px;height: 0px;" />
-	<img src="images/ballshadow.png" style="width: 0px;height: 0px;" />
-	<img src="images/paddle_1.png" style="width: 0px;height: 0px;" />
-	<img src="images/paddle_2.png" style="width: 0px;height: 0px;" />
-	<img src="images/paddle2_1.png" style="width: 0px;height: 0px;" />
-	<img src="images/paddle2_2.png" style="width: 0px;height: 0px;" />
-	<img src="images/paddle3_1.png" style="width: 0px;height: 0px;" />
-	<img src="images/paddle3_2.png" style="width: 0px;height: 0px;" />
-	<img src="images/paddle4_1.png" style="width: 0px;height: 0px;" />
-	<img src="images/paddle4_2.png" style="width: 0px;height: 0px;" />
-	<!-- 背景音乐（已删除） -->
-	<!-- <audio src="" style="width: 0px;height: 0px;border: 0px;" id="audio" loop="-1"></audio> -->
+	<!-- 背景音乐 -->
+	<audio src="" style="width: 0px;height: 0px;border: 0px;" id="audio" loop="-1"></audio>
 	<script src="js/common.js?s=4"></script>
 	<script src="js/scene.js?s=4"></script>
 	<script src="js/skills.js?s=4"></script>
@@ -117,8 +111,8 @@
 
 		}
 		window.startGame = function() {
-			// $("#audio").attr("src", "media/jntm.m4a");
-			// audio.play();
+			$("#audio").attr("src", "media/jntm.m4a");
+			audio.play();
 			window.cacheBallSpeed = parseInt($("#ballspeedset").val());
 			$("#ballspeedset").attr("disabled", "disabled");
 			_main.start();

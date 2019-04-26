@@ -1,8 +1,8 @@
 <img src="https://i.imgur.com/aoB8Er1.png" align=right />
 
-# 🏀 CXK 打篮球
+# 🏀 蔡徐坤打篮球
 
-本项目是 CXK 打篮球的游戏，原项目：[h5-game-blockBreaker](https://github.com/yangyunhe369/h5-game-blockBreaker)
+本项目是蔡徐坤打篮球的游戏，修改自[kasuganosoras/cxk-ball](https://github.com/kasuganosoras/cxk-ball)，原项目为：[h5-game-blockBreaker](https://github.com/yangyunhe369/h5-game-blockBreaker)
 
 **Demo**：[cxk.nmsl.run](https://cxk.nmsl.run/)
 
@@ -18,7 +18,7 @@
 
 ![](https://upload-images.jianshu.io/upload_images/3203841-f8468944b6321119.gif?imageMogr2/auto-orient/strip)
 
-祝您游戏愉快
+最后祝您身体健康，游戏愉快
 
 ## 如何体验
 
@@ -46,11 +46,11 @@ git clone https://github.com/qcminecraft/cxk-ball
 
 > __问：我按左右方向键没有反应怎么办__
 
-请使用 A 和 D
+可能是缓存没有刷新，请尝试Ctrl + F5 强制刷新缓存
 
 > __问：我玩的时候感觉有一点点卡__
 
-设备性能太低，建议用电脑玩以获得最好的体验，同时建议使用 Chrome、Firefox 等现代浏览器
+可能是因为设备性能太低，建议使用 Chrome、Firefox 等现代浏览器
 
 > __问：我听不到音乐__
 

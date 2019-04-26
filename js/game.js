@@ -81,9 +81,9 @@ class Game {
     // 绘制提示文字
     this.context.font = '32px Microsoft YaHei'
     this.context.fillStyle = '#000'
-    this.context.fillText('CXK，你球掉了！得分：' + globalScore, 404, 226)
+    this.context.fillText('蔡徐坤，你球掉了！得分：' + globalScore, 300, 226)
 	$("#ballspeedset").removeAttr("disabled");
-	// audio.pause();
+	audio.pause();
 	globalScore = 0;
   }
   // 游戏晋级
@@ -96,10 +96,10 @@ class Game {
     // 绘制背景图
     //this.drawBg()
     // 绘制提示文字
-    this.context.font = '32px Microsoft YaHei'
+    this.context.font = '36px Microsoft YaHei'
     this.context.fillStyle = '#000'
-    this.context.fillText('CXK，下一关！', 308, 226)
-	// audio.pause();
+    this.context.fillText('蔡徐坤，下一关！ 当前得分：'+ globalScore, 308, 226)
+	audio.pause();
   }
   // 游戏通关
   finalGame () {
@@ -111,11 +111,11 @@ class Game {
     // 绘制背景图
     //this.drawBg()
     // 绘制提示文字
-    this.context.font = '32px Microsoft YaHei'
+    this.context.font = '36px Microsoft YaHei'
     this.context.fillStyle = '#000'
-    this.context.fillText('CXK，通关！总分：' + globalScore, 308, 226)
+    this.context.fillText('恭喜通关！获得称号：打球像蔡徐坤  总分：' + globalScore, 208, 226)
 	$("#ballspeedset").removeAttr("disabled");
-	// audio.pause();
+	audio.pause();
 	globalScore = 0;
   }
   // 注册事件
@@ -310,7 +310,7 @@ class Game {
     })
 	window.startGame = function() {
 		window.cacheBallSpeed = parseInt($("#ballspeedset").val());
-		// audio.play();
+		audio.play();
 		if(g.state !== g.state_UPDATE) {
 			$("#ballspeedset").attr("disabled", "disabled");
 			if (g.state === g.state_GAMEOVER) { // 游戏结束时
@@ -326,17 +326,21 @@ class Game {
 		}
 	}
 	window.nextGame = function() {
-		// audio.play();
+		audio.play();
 		if (g.state === g.state_UPDATE && g.main.LV !== g.main.MAXLV) { // 进入下一关
-            // 开始游戏
-            g.state = g.state_START
-            // 初始化下一关卡
-            g.main.start(++g.main.LV)
-			$("#ballspeedset").attr("disabled", "disabled");
-        }
+      // 开始游戏
+      g.state = g.state_START
+      // 初始化下一关卡
+      g.main.start(++g.main.LV)
+      $('#level').val = g.main.LV;
+      $('#level').html('<option value="" selected="">'+ g.main.LV +'</option>');
+      $("#ballspeedset").attr("disabled", "disabled");
+    }else{
+      
+    }
 	}
 	window.pauseGame = function() {
-		// audio.pause();
+		audio.pause();
 		if(g.state !== g.state_UPDATE && g.state !== g.state_GAMEOVER) {
 			g.state = g.state_STOP
 		}
@@ -346,7 +350,7 @@ class Game {
         // 注册回车键发射事件
         case 13 :
 			window.cacheBallSpeed = parseInt($("#ballspeedset").val());
-			// audio.play();
+			audio.play();
 			if(g.state !== g.state_UPDATE) {
 				$("#ballspeedset").attr("disabled", "disabled");
 				if (g.state === g.state_GAMEOVER) { // 游戏结束时
@@ -363,7 +367,7 @@ class Game {
 			break
 		case 75 :
 			window.cacheBallSpeed = parseInt($("#ballspeedset").val());
-			// audio.play();
+			audio.play();
 			if(g.state !== g.state_UPDATE) {
 				$("#ballspeedset").attr("disabled", "disabled");
 				if (g.state === g.state_GAMEOVER) { // 游戏结束时
@@ -381,13 +385,13 @@ class Game {
         // N 键进入下一关卡
         case 78 :
           // 游戏状态为通关，且不为最终关卡时
-		  // audio.play();
+		  audio.play();
           if (g.state === g.state_UPDATE && g.main.LV !== g.main.MAXLV) { // 进入下一关
             // 开始游戏
             g.state = g.state_START
             // 初始化下一关卡
             g.main.start(++g.main.LV)
-			$("#ballspeedset").attr("disabled", "disabled");
+            $("#ballspeedset").attr("disabled", "disabled");
           }
           break
 		/* case 77 :
