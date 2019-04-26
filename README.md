@@ -4,11 +4,9 @@
 
 本项目是 CXK 打篮球的游戏，原项目：[h5-game-blockBreaker](https://github.com/yangyunhe369/h5-game-blockBreaker)
 
-**ReadMe:** [English Version](README_EN.md) | **Demo**：[cxk.ssrr.one](https://cxk.ssrr.one/)
+**Demo**：[cxk.nmsl.run](https://cxk.nmsl.run/)
 
-> 本游戏有一定难度，请 ikun 们不要轻易尝试
-
-最后，喜欢的话欢迎点个 Star，谢谢
+> 本游戏有较高难度，请 ikun 们不要尝试
 
 ## 游戏截图
 
@@ -27,7 +25,7 @@
 你可以直接玩 demo 或者自行 clone 到本地
 
 ```bash
-git clone https://github.com/kasuganosoras/cxk-ball
+git clone https://github.com/qcminecraft/cxk-ball
 ```
 
 访问你的站点或者直接浏览器打开 `index.html` 开始玩
@@ -56,7 +54,7 @@ git clone https://github.com/kasuganosoras/cxk-ball
 
 > __问：我听不到音乐__
 
-现在已经没有音乐了
+请刷新浏览器缓存，音乐在这个分支被重新加入
 
 ## 未来计划（有生之年系列）
 
@@ -70,9 +68,10 @@ git clone https://github.com/kasuganosoras/cxk-ball
 
 ## 开发者的话
 
-对于 CXK，我的观点是：可以适当地开玩笑和恶搞，但是不应该侮辱，我们应该尊重他人，适可而止。
-
-因此你在本游戏中不会看到任何侮辱 CXK 的词汇和言论，同时也请大家不要在 Issues 里发表不文明的内容。
+抵制不良游戏 拒绝盗版游戏
+注意自我保护 谨防受骗上当
+适度游戏益脑 过度游戏伤身
+合理安排时间 享受健康生活
 
 ## License
 
